@@ -1,0 +1,15 @@
+flowchart LR
+    A[Broker creates Offer] --> B{Amount and date valid?}
+    B -- No --> C[Validation error]
+    B -- Yes --> D[Offer Status = Submitted]
+    D --> E{Offer Amount >= 500000?}
+    E -- No --> F[Normal Offer lifecycle]
+    E -- Yes --> G[Submit for approval]
+    G --> H[Offer locked]
+    H --> I{Manager decision}
+    I -- Approve --> J[Status = Accepted]
+    I -- Reject --> K[Status = Rejected]
+    K --> L[Offer unlocked]
+    J --> M[Ready for close and reporting]
+    F --> M
+    M --> N[Agentforce can summarize and guide broker]
