@@ -47,10 +47,3 @@ DreamHouse brokers need a reliable way to capture client offers against properti
 
 The intended Agentforce extension is a broker-facing assistant that can answer questions about Offers and Properties, summarize a client’s offer history, and invoke approved actions such as launching the Offer approval flow. Agentforce should use least-privilege access and should never expose confidential data to an unauthorized user.
 
-## Evidence To Capture
-
-- Offer field list showing relationships and field types
-- Validation Rules page showing both rules as active
-- Flow detail showing `Offer Status Initialization` as active
-- Approval process detail showing threshold, step, and active status
-- Demo record showing Property, Contact, Amount, Target Close Date, and Status
